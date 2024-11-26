@@ -10,12 +10,21 @@
 
     const notasAluno = [7, 5, 9, 8];
 
-    y
+    //PROCESSAMENTO
 
+    notasAluno.sort()
+    let posicaoMaiorNota = notasAluno.length - 1;
+    let maiorNota = notasAluno.splice(posicaoMaiorNota, 1);
+    let menorNota = notasAluno.splice(0, 1);
+
+
+    let soma = 0;
     for (let nota of notasAlunos) {
-
+        soma = soma + nota;
     }
-
+    let media = soma / notasAluno.length;
     //SAÍDA
+
+    document.write(`A maior nota é ${maiorNota} <br> A menor nota é ${menorNota} <br> A média é ${media}`);
 
 </script>
