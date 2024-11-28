@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+
+    //ENTRADA
+
+    const notas = Number(prompt(`Informe a quantidade de notas que obteve:`));
+    let soma = 0;
+    //PROCESSAMENTO
+
+    for (let contador = 1; contador <= notas; contador++ ) {
+        let notaObtida = Number(prompt(`Informe a nota:`));
+        soma += notaObtida;
+    }
+    const media = soma / notas;
+
+    //SAÍDA
+
+    document.write(`A média das notas é ${media.toFixed(1)}`);
+
+</script>
