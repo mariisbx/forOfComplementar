@@ -7,12 +7,24 @@
 
     //ENTRADA
 
-    const palavra = prompt(`Informe uma palavra:`);
+    const palavra = prompt(`Informe uma palavra:`).toLowerCase();
+    let vogal = [];
+    let consoante = [];
 
     //PROCESSAMENTO
 
-    
-
+    Array.from(palavra);
+    for (let letra of palavra) {
+        if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u")
+        {
+        vogal.push(letra);
+    }
+    else {
+        consoante.push(letra);
+    }   
+}
     //SAÍDA
+
+    alert(`Quantidade de vogais: ${vogal.length}\nQuantidade de consoantes: ${consoante.length}`);
 
 </script>
