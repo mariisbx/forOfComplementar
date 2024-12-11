@@ -1,0 +1,46 @@
+<script>
+    //Problema: Cidades e Estados
+    /*
+    Considere a seguinte lista de Cidades:
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    Pergunte ao usuário a qual estado pertence cada uma das cidades e adicione em listas separadas, sendo uma lista para cada estado.
+    No final do programa apresente os estados com as suas respectivas cidades. Porém, ordene a apresentação das listas, apresentando de forma decrescente pela quantidade de cidades que o estado possui.
+    */
+
+    //Entrada
+
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let rs = [];
+    let sc = [];
+    let pr = [];
+
+    //Processamento
+
+    for(let item of cidades) {
+        let estado = prompt(`Qual estado pertence a cidade ${item}?`).toLowerCase();
+        if (estado == "sc") {
+            sc.push(item);
+        } else if (estado == "rs") {
+            rs.push(item);
+        } else if (estado == "pr") {
+            pr.push(item);
+    }
+    }
+
+    //Saída
+
+    if (sc.length > rs.length && rs.length > pr.length) {
+        alert(`${sc}\n${rs}\n${pr}`);
+    } else if (sc.length > pr.length && pr.length > rs.length) {
+        alert(`${sc}\n${pr}\n${rs}`);
+    } else if (rs.length > sc.length && sc.length > pr.length) {
+        alert(`${rs}\n${sc}\n${pr}`);
+    } else if (rs.length > pr.length && pr.length > sc.length) {
+        alert(`${rs}\n${pr}\n${sc}`);
+    } else if (pr.length > sc.length && sc.length > rs.length) {
+        alert(`${pr}\n${sc}\n${rs}`);
+    } else if (pr.length > rs.length && rs.lenght > sc.lenght) {
+        alert(`${pr}\n${rs}\n${sc}`);
+    }
+
+</script>
